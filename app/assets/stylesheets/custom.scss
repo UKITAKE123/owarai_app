@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   h1 {
     font-size: 3em;
     letter-spacing: 4px;
-    margin: 30px; 
+    margin: 50px; 
     text-align: center;
   }
   
@@ -48,6 +48,27 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.7em;
     line-height: 1.7em;
   }
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
   /* header */
 
 #logo {
@@ -95,3 +116,25 @@ footer {
     float: left;
     margin-left: 15px;
   }
+
+  /* forms */
+
+input, textarea, select{
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
