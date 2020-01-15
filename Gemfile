@@ -34,6 +34,8 @@ gem 'rails-i18n'
 
 gem 'faker', '1.7.3'
 
+gem 'carrierwave'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
